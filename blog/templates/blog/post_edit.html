@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+
+<section>
+
+   <h1> Crear un nuevo post          </h1> 
+
+    <p> Solo puedes enviar si te registras. Ir a registrar ! <a href="/register"> Registrar</a> <p>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Guardar</button>
+    </form>
+
+
+</section>
+{% endblock %}
